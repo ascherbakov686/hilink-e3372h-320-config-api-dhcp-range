@@ -27,7 +27,6 @@ class HuaweiE3372(object):
         '__RequestVerificationToken': _dict['TokInfo']
       }
       
-      #data = '<?xml version: "1.0" encoding="UTF-8"?><request><dataswitch>' + state + '</dataswitch></request>'
       data = '<?xml version: "1.0" encoding="UTF-8"?><request><DnsStatus>1</DnsStatus><DhcpStartIPAddress>192.168.8.100</DhcpStartIPAddress><DhcpIPAddress>192.168.8.1</DhcpIPAddress><accessipaddress></accessipaddress><homeurl>hi.link</homeurl><DhcpStatus>1</DhcpStatus><DhcpLanNetmask>255.255.255.0</DhcpLanNetmask><SecondaryDns>192.168.8.1</SecondaryDns><PrimaryDns>192.168.8.1</PrimaryDns><DhcpEndIPAddress>192.168.8.100</DhcpEndIPAddress><DhcpLeaseTime>86400</DhcpLeaseTime></request>'
 
       r = self.session.post(self.base_url + self.SWITCH_URL, data=data, headers=headers, timeout=3)
